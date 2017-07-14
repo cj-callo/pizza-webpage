@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/scripts2.js"></script>
+  <title>Harvest's Pizza</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Harvest's Pizza! </h1>
+    <p>(welcoming paragraph)</p>
+
+    <form>
+      <h2>Create your very own Harvest Pizza</h2>
+      <h3> Which size is right for you?</h3>
+      <div class="size">
+        <label>
+          <input type="radio" name="type" value="small" checked>
+          Small
+        </label>
+      </div>
+
+      <form id="pizza">
+        <div class="size">
+          <label>
+            <input type="radio" name="type" value="mediun">
+            Medium
+          </label>
+        </div>
+        <div class="size">
+          <label>
+            <input type="radio" name="type" value="large">
+            Large
+          </label>
+        </div>
+        <h3> What shall we put on your pizza today? </h>
+          <div class="form-group">
+            <input type="checkbox" name="veggies" value="artichoke"> Artichoke<br>
+            <input type="checkbox" name="veggies" value="asparagus"> Asparagus<br>
+            <input type="checkbox" name="veggies" value="broccoli"> Broccoli<br>
+            <input type="checkbox" name="veggies" value="carrots"> Carrots<br>
+            <input type="checkbox" name="veggies" value="eggplant"> Eggplant.<br>
+            <input type="checkbox" name="veggies" value="fennel"> Fennel<br>
+            <input type="checkbox" name="veggies" value="kale"> Kale<br>
+            <input type="checkbox" name="veggies" value="microgreens"> Microgreens<br>
+            <input type="checkbox" name="veggies" value="mushrooms"> Mushrooms<br>
+            <input type="checkbox" name="veggies" value="onions"> Onions<br>
+            <input type="checkbox" name="veggies" value="olives"> Olives<br>
+            <input type="checkbox" name="veggies" value="peppers"> Mixed bell peppers.<br>
+            <input type="checkbox" name="veggies" value="pumpkin"> Pumpkin<br>
+            <input type="checkbox" name="veggies" value="spinach"> Spinach<br>
+            <input type="checkbox" name="veggies" value="spring"> Spring onions<br>
+            <input type="checkbox" name="veggies" value="tomatoes"> Tomatoes<br>
+            <input type="checkbox" name="veggies" value="zucchini"> Zucchini<br>
+          </div>
+          <button type="submit"> Review My Order</button>
+        </form>
+        <div id="review">
+          <h2>Great! Looks like you are ordering a <span id="sizing"></span> pizza with:</h2>
+          <span id="toppings">
+          </span>
+        </div>
+      </div>
+    </body>
+    </html>
