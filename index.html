@@ -14,23 +14,24 @@
 
       <h2>Create your very own Harvest Pizza</h2>
       <h3> Which size is right for you?</h3>
+
+      <form id="pizza">
       <div class="size">
         <label>
-          <input type="radio" name="type" value="small" checked>
+          <input type="radio" name="sizing" value="small" checked>
           Small
         </label>
       </div>
 
-      <form id="pizza">
-        <div class="form-group">
+        <div class="size">
           <label>
-            <input type="radio" name="type" value="mediun">
+            <input type="radio" name="sizing" value="medium">
             Medium
           </label>
         </div>
-        <div class="form-group">
+        <div class="size">
+          <input type="radio" name="sizing" value="large">
           <label>
-            <input type="radio" name="type" value="large">
             Large
           </label>
         </div>
@@ -61,6 +62,9 @@
           <h2>Great! Looks like you are ordering a <span id="sizing"></span> pizza with:</h2>
           <span id="toppings">
           </span>
+        </div>
+        <div id="cost">
+          <h2>Ready for us to send your pizza to the oven? Please pay: $<span id="price"></span></h2>
         </div>
       </div>
     </body>
