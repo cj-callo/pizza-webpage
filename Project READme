@@ -1,0 +1,20 @@
+Pizza Webpage
+Epicodus - Individual Assignment #4 Weeks 11-13 Object-Oriented Javascript
+
+#### By **Chrisitne Callo**
+
+## Description
+
+Development of an interactive pizza webpage, allowing users to select size and toppings of pizza and display total cost. Project
+tests student's use of javascript, jquery, css and html.
+
+## Setup/Installation Requirements
+
+* Utilize terminal and set-up of Atom as default tool
+* Set-up of Git and creation of GitHub repository 
+* Download Boostrap stylesheet
+* Download latest jQuery scripts
+
+
+### License
+Copyright (c) 2017 **Christine Joann R. Callo**
