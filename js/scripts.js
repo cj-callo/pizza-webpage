@@ -1,23 +1,17 @@
-
+var small=8.99;
+var mediium=11.99;
+var large=14.99;
+var toppings=[];
 
 function Pizza(size,toppings) {
   this.size=size;
-  this.toppings=[];
+  this.toppings=toppings;
 }
 
 
-
-//Pizza.protype.sizeofPizza = function() {
-  //var type = "";
-  //if ()
-    //return type = 8.99;
-  //} {
-    //return type = 0
-    //console.log("")
-//
-
-
-
+Pizza.prototype.addToppings=function() {
+  smallToppings = toppings.length + small
+}
 
 
 
@@ -31,24 +25,16 @@ $(document).ready(function() {
     $("#review").show();
     $("#cost").show();
     //console.log("result");
-    var  size = $("input:radio[name=sizing]:checked").val();
-    var  sizePrice ="";
-
-    if (size ==="large") {
+    var sizePrice = $("input:radio[name=sizing]:checked").val();
+    if (sizePrice ==="large") {
       sizePrice=14.99;
-    } else if (size === "medium") {
+    } else if (sizePrice === "medium") {
       sizePrice=11.99;
-    } else if (size === "small") {
+    } else if (sizePrice === "small") {
       sizePrice=8.99;
     } else {
       sizePrice=0;
     }
-
-
-
-
-
-
     var size = $("input:radio[name=sizing]:checked").val();
       $("#sizing").text(size);
     $("input:checkbox[name=veggies]:checked").each(function() {
@@ -57,6 +43,9 @@ $(document).ready(function() {
           arrayOfVeggies.push(veggies);
         $("#toppings").append(veggies + "<br>");
         $("#price").text(sizePrice);
+
+        var totalCost= $("#price").val();
+
 
   });
 

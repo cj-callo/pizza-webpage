@@ -8,34 +8,46 @@
   <title>Harvest's Pizza</title>
 </head>
 <body>
+  <div class="jumbotron">
   <div class="container">
     <h1>Welcome to Harvest's Pizza! </h1>
-    <p>(welcoming paragraph)</p>
+    <p>We at Harvest pizza take pride in are carefully crafted vegeetarian pizzas.
+      Our ingredients are always fresh and locally-sourced. Our homemade crust is
+      hand-tosssed and our sauces are made with a delicious blend of herbs and spices
+      And best of all, you get to choose how you want it!</p>
+    <img src="pizza1.jpeg" height="250" width="700">
 
       <h2>Create your very own Harvest Pizza</h2>
       <h3> Which size is right for you?</h3>
+        <p>Prices listed does not include toppings.</p>
 
       <form id="pizza">
       <div class="size">
         <label>
           <input type="radio" name="sizing" value="small" checked>
-          Small
+          Small $8.99
         </label>
       </div>
 
         <div class="size">
           <label>
             <input type="radio" name="sizing" value="medium">
-            Medium
+            Medium $11.99
           </label>
         </div>
         <div class="size">
           <input type="radio" name="sizing" value="large">
           <label>
-            Large
+            Large $14.99
           </label>
         </div>
         <h3> What shall we put on your pizza today? </h>
+          <ul>Add your own toppings
+            <li>1-2 toppings = $2.99</li>
+            <li>3-4 toppings = $3.99</li>
+            <li>5-6 toppings = $5.99</li>
+            <li>7+ toppings = $8.99</li>
+          </ul>
           <div class="form-group">
             <input type="checkbox" name="veggies" value="artichoke"> Artichoke<br>
             <input type="checkbox" name="veggies" value="asparagus"> Asparagus<br>
@@ -67,5 +79,6 @@
           <h2>Ready for us to send your pizza to the oven? Please pay: $<span id="price"></span></h2>
         </div>
       </div>
+    </div>
     </body>
     </html>
