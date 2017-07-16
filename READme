@@ -1,7 +1,7 @@
 SPECS:
-1) User will select options for size of pizza:
+1) User can select options for size of pizza:
   Options: Small, Medium, Large
-2) User will selections for toppings of pizza:
+2) User can select toppings:
   Options: Tomatoes, Spinach, Onions, Mushrooms, Carrots, Sprouts, Kale,
   Olives, Beets, Mixed Greens, Peppers,
 3) Pizza without toppings will return a base price:
@@ -11,15 +11,6 @@ SPECS:
   Output: $11.99
   Input: Large
   Output: $14.99
-4) Pizza with 1-2 toppings, will add $2.99 to base price:
-  Input: Small + Tomatoes + Spinach
-  Output: $10.98
-5) Pizza with 3-4 toppings, will add $3.99 to base price:
-  Input: Small + Tomatoes + Spinach + Onions + Olives
-  Output: $12.98
-6) Pizza with 5-6 toppings, will add $5.99 to base price:
-  Input: Small + Tomatoes + Spinach + Onions + Olives + Peppers
-  Output: 15.98
-7) Pizza with 6+ toppings, will add $8.99 to base price:
-  Input: Small + ALL toppings
-  Output: $17.98
+4) For each topping, $.99 will be added to the selected base price:
+  Input: small + tomatoes + peppers
+  Output: $10.99
