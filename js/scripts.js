@@ -1,10 +1,30 @@
-function Pizza(size,toppings) {
+function Pizza(size) {
   this.size=size;
   this.toppings=[];
+  this.cost=0;
 }
 
-Pizza.prototype.withToppings=function() {
-  var totalCost= (this.toppings.length * .99) + this.size
+Pizza.prototype.withToppings = function() {
+  var toppings=[];
+    $("input:checkbox[name=veggies]:checked").each(function() {
+      var veggies = $(this).val();
+      toppings.push(veggies);
+      $("#toppings").append(veggies + "<br>");
+    });
+      this.toppings = toppings;
+    }
+
+Pizza.prototype.calculateCost = function() {
+  if (this.size === "large") {
+    this.cost=14.99;
+  } else if (this.size === "medium") {
+    this.cost=11.99;
+  } else if (this.size === "small") {
+    this.cost=8.99;
+  } else {
+    alert ("Error");
+  }
+  this.cost = (this.toppings.length * .99) + this.cost
 }
 
 
@@ -14,26 +34,12 @@ $(document).ready(function() {
     $("#review").show();
     $("#cost").show();
     //console.log("result");
-    var sizePrice = $("input:radio[name=sizing]:checked").val();
-    newOrder = new Pizza (sizePrice, veggies);
-    if (sizePrice ==="large") {
-      sizePrice=14.99;
-    } else if (sizePrice === "medium") {
-      sizePrice=11.99;
-    } else if (sizePrice === "small") {
-      sizePrice=8.99;
-    } else {
-      sizePrice=0;
-    }
     var size = $("input:radio[name=sizing]:checked").val();
-    $("#sizing").text(size);
-    $("input:checkbox[name=veggies]:checked").each(function() {
-      newOrder.withToppings("");
-      var arrayOfVeggies=[];
-      var veggies = $(this).val();
-      arrayOfVeggies.push(veggies);
-      $("#toppings").append(veggies + "<br>");
-      $("#price").text(sizePrice);
+    newOrder = new Pizza (size);
+    newOrder.withToppings();
+    newOrder.calculateCost();
+    $("#sizing").text(newOrder.size);
+    $("#price").text(newOrder.cost);
     });
   });
-});
+;
